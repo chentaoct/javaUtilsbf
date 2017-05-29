@@ -28,7 +28,7 @@ public class UserController {
 
     @RequestMapping("showUser")
     public String showUser(HttpServletRequest request, Model model){
-        log.info("查询所有用户信息");
+        log.info("查询所有1用户信息");
         List<UserDomain> userList = userService.listUser();
         model.addAttribute("userList",userList);
         return "user";
