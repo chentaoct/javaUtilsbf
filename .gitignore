@@ -1,0 +1,13 @@
+*.classpath
+*.project
+install.bat
+/target
+*.settings
+target
+.idea
+*.iml
+.svn
+node_modules
+*.ipr
+*.iws
+bash.exe.stackdump
