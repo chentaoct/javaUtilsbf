@@ -31,7 +31,7 @@
     <script type="text/javascript">
         var _menus = {"menus":[
             {"menuid":"1","icon":"icon-sys","menuname":"文件相关",
-                "menus":[{"menuname":"excel文件上传","icon":"icon-nav","url":"http://www.16sucai.com"},
+                "menus":[{"menuname":"excel文件上传","icon":"icon-nav","url":"http://www.baidu.com"},
                     {"menuname":"图片上传","icon":"icon-add","url":"demo.html"},
                     {"menuname":"多文件上传","icon":"icon-set","url":"demo.html"}
                 ]

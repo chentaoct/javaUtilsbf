@@ -21,10 +21,6 @@ public class UserController {
     @Autowired
     UserService userService;
 
-    @RequestMapping("index")
-    public String  index(HttpServletRequest request, Model model){
-        return "index";
-    }
 
     @RequestMapping("showUser")
     public String showUser(HttpServletRequest request, Model model){
