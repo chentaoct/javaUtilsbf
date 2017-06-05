@@ -10,7 +10,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="javaUtils" target="1.5" />
+      <module name="iBase4J" target="1.5" />
+      <module name="iBase4J-Biz-Facade" target="1.8" />
+      <module name="iBase4J-Biz-Service" target="1.8" />
+      <module name="iBase4J-Biz-Web" target="1.8" />
+      <module name="iBase4J-Common" target="1.8" />
+      <module name="iBase4J-SYS-Facade" target="1.8" />
+      <module name="iBase4J-SYS-Service" target="1.8" />
+      <module name="iBase4J-SYS-Web" target="1.8" />
+      <module name="javaUtils" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
