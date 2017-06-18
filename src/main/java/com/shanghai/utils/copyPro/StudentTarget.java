@@ -8,15 +8,23 @@ import java.util.Date;
 public class StudentTarget {
     private String name;
     private String marr;
-   /* private Date StudentDate;
+   private Date StudentDate;
+    private Date StudentDate2;
 
+    public Date getStudentDate2() {
+        return StudentDate2;
+    }
+
+    public void setStudentDate2(Date studentDate2) {
+        StudentDate2 = studentDate2;
+    }
     public Date getStudentDate() {
         return StudentDate;
     }
 
     public void setStudentDate(Date studentDate) {
         StudentDate = studentDate;
-    }*/
+    }
 
     public String getName() {
         return name;
@@ -39,6 +47,7 @@ public class StudentTarget {
         return "StudentTarget{" +
                 "name='" + name + '\'' +
                 ", marr='" + marr + '\'' +
+                ", StudentDate=" + StudentDate +
                 '}';
     }
 }

@@ -8,13 +8,22 @@ import java.util.Date;
 public class StudentSource {
     private String name;
     private  String age;
-    private Date StudentDate;
+    private String StudentDate;
+    private Date StudentDate2;
 
-    public Date getStudentDate() {
+    public Date getStudentDate2() {
+        return StudentDate2;
+    }
+
+    public void setStudentDate2(Date studentDate2) {
+        StudentDate2 = studentDate2;
+    }
+
+    public String getStudentDate() {
         return StudentDate;
     }
 
-    public void setStudentDate(Date studentDate) {
+    public void setStudentDate(String studentDate) {
         StudentDate = studentDate;
     }
 
