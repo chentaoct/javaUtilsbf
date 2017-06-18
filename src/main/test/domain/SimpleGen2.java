@@ -6,6 +6,10 @@ package domain;
 public class SimpleGen2<E> {
     private E ob;
 
+    public SimpleGen2(E ob) {
+        this.ob = ob;
+    }
+
     public E getOb() {
         return ob;
     }
