@@ -1,0 +1,45 @@
+package com.shanghai.utils.copyPro;
+
+import java.util.Date;
+
+/**
+ * Created by 陈涛 on 2017/6/14.
+ */
+public class StudentSource {
+    private String name;
+    private  String age;
+    private Date StudentDate;
+
+    public Date getStudentDate() {
+        return StudentDate;
+    }
+
+    public void setStudentDate(Date studentDate) {
+        StudentDate = studentDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentSource{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", StudentDate=" + StudentDate +
+                '}';
+    }
+}
