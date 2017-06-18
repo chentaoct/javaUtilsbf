@@ -1,4 +1,4 @@
-package com.shanghai.utils.copyPro;
+package springBeanUtilsTest;
 
 import java.util.Date;
 

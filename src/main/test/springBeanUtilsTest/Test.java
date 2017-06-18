@@ -1,14 +1,8 @@
-package com.shanghai.utils.copyPro;
+package springBeanUtilsTest;
 
-import org.apache.commons.beanutils.*;
-import org.apache.commons.beanutils.converters.DateConverter;
 import org.springframework.beans.BeanUtils;
 
 import java.lang.reflect.InvocationTargetException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by 陈涛 on 2017/6/14.
