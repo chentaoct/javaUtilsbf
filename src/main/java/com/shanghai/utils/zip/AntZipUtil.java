@@ -1,7 +1,9 @@
 package com.shanghai.utils.zip;
 
+
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipOutputStream;
+import org.slf4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -10,10 +12,14 @@ import java.util.zip.CRC32;
 import java.util.zip.CheckedOutputStream;
 
 /**
+ * 功能:使用Apache Ant里提供的org.apache.tools.zip实现zip压缩和解压 (支持中文文件名)
+ * 解决了由于java.util.zip包不支持汉字的问题。 使用java.util.zip包时,当zip文件中有名字为中文的文件时,
+ * 就会出现异常:"Exception in thread "main " java.lang.IllegalArgumentException at
+ * java.util.zip.ZipInputStream.getUTF8String(ZipInputStream.java:285)
  * Created by 陈涛 on 2017/6/20.
  */
 public class AntZipUtil {
-
+    private static Logger log = org.slf4j.LoggerFactory.getLogger(AntZipUtil.class);
     private static List list = new ArrayList();
 
     private static List listFile(String path) {
@@ -80,6 +86,7 @@ public class AntZipUtil {
             }
             out.close();
         } catch (Exception e) {
+            log.error(e.getMessage());
             e.printStackTrace();
         }
     }
@@ -146,6 +153,7 @@ public class AntZipUtil {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            log.error(e.getMessage());
             e.printStackTrace();
         }
         return flag;
@@ -339,6 +347,7 @@ public class AntZipUtil {
                 flag = true;
             }
         } catch (Exception ex) {
+            log.error(ex.getMessage());
             ex.printStackTrace();
         }
         return flag;
@@ -368,7 +377,8 @@ public class AntZipUtil {
                 }
             }
         } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            log.error(ex.getMessage());
+            ex.printStackTrace();
         }
     }
 
@@ -398,12 +408,20 @@ public class AntZipUtil {
 //        System.out.println(AntZipUtil.zip(baseDirName, fileNames,zipFileName,"GBK"));
 
         //压缩一个文件夹 到ZIP
-       /* String sourcePath = "D:\\fileTest\\zip1\\";
-        String zipFilePath = "D:\\fileTest\\zip2\\中文2.zip";
-        AntZipUtil.zip(sourcePath, zipFilePath);*/
+        //testZip();
 
 
         //解压缩
+        testUnzip();
+    }
+
+    private static void testUnzip() {
         System.out.println(AntZipUtil.unZip("D:\\fileTest\\zip2\\中文2.zip", "D:\\fileTest\\unfile"));
+    }
+
+    private static void testZip() {
+        String sourcePath = "D:\\fileTest\\zip1\\";
+        String zipFilePath = "D:\\fileTest\\zip2\\中文2.zip";
+        AntZipUtil.zip(sourcePath, zipFilePath);
     }
 }
