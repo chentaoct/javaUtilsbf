@@ -10,17 +10,19 @@ import java.util.Date;
  */
 public class FileTest {
     public static void main(String[] args) {
+        String filePath="D:\\fileTest\\csv\\customer\\hold\\data\\20170623\\20170623110900";
         File file1 = new File("D:\\fileTest\\customer_hold_20170623110900_0.csv");
         File file2 = new File("D:\\fileTest\\csv\\customer\\hold\\data\\20170623\\20170623110900\\1.csv");
+        FileUtils.createFile(filePath);
         copyFiles(file1,file2);
     }
 
-    private static void copyFiles(File f1, File f2) {
+    private static void copyFiles(File source, File target) {
         try {
             long time=new Date().getTime();
             int length=2097152;
-            FileInputStream in=new FileInputStream(f1);
-            FileOutputStream out=new FileOutputStream(f2);
+            FileInputStream in=new FileInputStream(source);
+            FileOutputStream out=new FileOutputStream(target);
             byte[] buffer=new byte[length];
             while(true){
                 int ins=in.read(buffer);

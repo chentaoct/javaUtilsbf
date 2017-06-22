@@ -77,6 +77,7 @@
           <element id="library" level="project" name="Maven: org.apache.ant:ant:1.7.1" />
           <element id="library" level="project" name="Maven: org.apache.ant:ant-launcher:1.7.1" />
           <element id="library" level="project" name="Maven: net.sourceforge.javacsv:javacsv:2.0" />
+          <element id="library" level="project" name="Maven: commons-net:commons-net:3.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
