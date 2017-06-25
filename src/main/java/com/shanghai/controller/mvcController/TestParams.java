@@ -2,6 +2,7 @@ package com.shanghai.controller.mvcController;
 
 import com.shanghai.domain.Person;
 import com.shanghai.domain.UserDomain;
+import com.shanghai.dto.req.Student;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,5 +24,11 @@ public class TestParams {
     @ResponseBody
     public UserDomain  testRequestBody2(@RequestBody UserDomain userDomain){
         return userDomain;
+    }
+
+    @RequestMapping(value = "testModelAttribute", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public Student  testModelAttribute(@ModelAttribute Student student){
+        return student;
     }
 }
