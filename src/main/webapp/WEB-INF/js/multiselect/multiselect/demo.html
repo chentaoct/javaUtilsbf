@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery MultiSelect Plugin Tests</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.multiselect.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="src/jquery.multiselect.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$("#test").multiselect();
+	
+	//初始化选项
+	var ids = "1,3".split(',');        
+        if (ids != null) {            
+            $('#test').val(ids);
+            $('#test').multiselect("refresh");           
+        }
+	
+    //获取选中项	
+	$("#btnok").click(function(){
+		var ids=[];
+		$("#test :checked").each(function(i,item){
+			ids.push($(item).attr("value"));
+		});	
+		alert(ids.join(","))
+	});
+});
+</script>
+</head>
+<body>
+<form>
+		<select multiple id="test">
+			<option value="1">上</option>
+			<option value="2">下</option>
+			<option value="3">左</option>
+			<option value="4">右</option>
+		</select>
+		<input type="button" value="ok" id="btnok">
+</form>
+</body>
+</html>
